@@ -93,6 +93,24 @@ class swimo extends eqLogic {
        $ipaddress = config::byKey('ipaddress','swimo');
        $serial = config::byKey('serial','swimo');
        $apikey = config::byKey('apikey','swimo');
+       log::add('swimo', 'debug', 'start update ');
+       $url = "http://".$ipaddress."/cgi-bin/getAll?serial=".$serial."&api=".$apikey;
+       $request_http = new com_http($url);
+       $result = json_decode($request_http->exec(60,2), true);
+       foreach ($result["accueil_analyse"] as $sensor) {
+         $eqLogic = eqLogic::byLogicalId($sensor['nmSensor'],'swimo');
+         if(is_object($eqLogic)){
+           $state = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'state');
+           if(is_object($state)){
+             $state->event($sensor['etatSensor']);
+           }
+           $value = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'value');
+           if(is_object($value)){
+             log::add('swimo', 'debug', 'valeur '. $sensor['liveSensor'][0]);
+             $value->event($sensor['liveSensor'][0]);
+           }
+         }
+       }
      }
 
      public static function sync(){
@@ -104,13 +122,14 @@ class swimo extends eqLogic {
        $request_http = new com_http($url);
        $result = json_decode($request_http->exec(60,2), true);
        foreach ($result["accueil_analyse"] as $sensor) {
-         $eqLogic = eqLogic::byLogicalId($sensor['nmSensor']);
+         $eqLogic = eqLogic::byLogicalId($sensor['nmSensor'],'swimo');
          if(!is_object($eqLogic)){
            $eqLogic = new swimo();
            $eqLogic->setEqType_name('swimo');
            $eqLogic->setLogicalId($sensor['nmSensor']);
            $eqLogic->setName($sensor['nameSensor']);
          }
+         $eqLogic->setIsEnable(1);
          $eqLogic->setConfiguration('nmSensor',$sensor['nmSensor']);
          $eqLogic->setConfiguration('sensorType',$sensor['sensorType']);
          $eqLogic->save();
@@ -121,6 +140,8 @@ class swimo extends eqLogic {
            $state->setEqLogic_id($eqLogic->getId());
            $state->setLogicalId('state');
            $state->setName('etat');
+           $state->setIsHistorized(1);
+           $state->setIsVisible(0);
          }
          $state->setType('info');
          $state->setSubType('binary');
@@ -132,13 +153,17 @@ class swimo extends eqLogic {
            $valeur->setEqLogic_id($eqLogic->getId());
            $valeur->setLogicalId('value');
            $valeur->setName('valeur');
+           $valeur->setIsHistorized(1);
+           $valeur->setIsVisible(1);
          }
          $valeur->setType('info');
          $valeur->setSubType('numeric');
          switch ($sensor['sensorType']) {
            case '1':
-             $valeur->setUnite('°C');
-             break;
+            $valeur->setConfiguration('minValue',$sensor['alarmMin']);
+            $valeur->setConfiguration('maxValue',$sensor['alarmMax']);
+            $valeur->setUnite('°C');
+            break;
 
            default:
              // code...

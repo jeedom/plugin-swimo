@@ -16,16 +16,16 @@ $eqLogics = eqLogic::byType($plugin->getId());
         <br>
         <span>{{Ajouter}}</span>
     </div>
-		<div class="cursor eqLogicAction" data-action="sync" style="text-align: center; background-color : #ffffff; height : 120px;margin-bottom : 10px;padding : 5px;border-radius: 2px;width : 160px;margin-left : 10px;" >
-          <i class="fa fa-sync" style="font-size : 6em;color:#94ca02;"></i>
+		<div class="cursor eqLogicAction logoSecondary" data-action="sync">
+          <i class="fa fa-sync"></i>
          <br>
-         <span style="font-size : 1.1em;position:relative; top : 23px;word-break: break-all;white-space: pre-wrap;word-wrap: break-word;color:#94ca02">{{Synchronisation}}</span>
+         <span>{{Synchronisation}}</span>
      </div>
       <div class="cursor eqLogicAction logoSecondary" data-action="gotoPluginConf">
-      <i class="fas fa-wrench"></i>
-    <br>
-    <span>{{Configuration}}</span>
-  </div>
+		      <i class="fas fa-wrench"></i>
+		    <br>
+		    <span>{{Configuration}}</span>
+		  </div>
   </div>
   <legend><i class="fas fa-table"></i> {{Mes swimos}}</legend>
 	   <input class="form-control" placeholder="{{Rechercher}}" id="in_searchEqlogic" />
@@ -125,4 +125,4 @@ foreach (object::all() as $object) {
 </div>
 
 <?php include_file('desktop', 'swimo', 'js', 'swimo');?>
-<!--<?php //include_file('core', 'swimo', 'js');?>-->
+<?php include_file('core', 'plugin.template', 'js');?>
