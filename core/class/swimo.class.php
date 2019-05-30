@@ -111,6 +111,20 @@ public static function updateValues(){
       }
     }
   }
+  foreach ($result["accueil_appareil"] as $device) {
+    $eqLogic = eqLogic::byLogicalId(1000 + $device['nmAction'],'swimo');
+    if(is_object($eqLogic)){
+      log::add('swimo', 'debug', 'valeurs actionneur : ' . $device['isOff']);
+      $state = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'state');
+      if(is_object($state)){
+        $state->event($device['isOff']);
+      }
+      $mode = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'mode');
+      if(is_object($mode)){
+        $mode->event($device['textDevice']);
+      }
+    }
+  }
 }
 
 public static function sync(){
@@ -214,46 +228,11 @@ public static function sync(){
       $valeur->setUnite('mg/l');
       break;
 
-      case '9':
-      $valeur->setSubType('binary');
-      break;
-
-      case '10':
-      $valeur->setSubType('binary');
-      break;
-
-      case '11':
-      $valeur->setSubType('binary');
-      break;
-
-      case '12':
-      $valeur->setSubType('binary');
-      break;
-
-      case '13':
-      $valeur->setSubType('binary');
-      break;
-
       case '14':
       $valeur->setSubType('numeric');
       $valeur->setConfiguration('minValue',-5);
       $valeur->setConfiguration('maxValue',5);
       $valeur->setUnite('m');
-      break;
-
-      case '15':
-      $valeur->setSubType('binary');
-      break;
-
-      case '16':
-      $valeur->setSubType('binary');
-      break;
-
-      case '17':
-      $valeur->setSubType('numeric');
-      $valeur->setConfiguration('minValue',-15);
-      $valeur->setConfiguration('maxValue',55);
-      $valeur->setUnite('°C');
       break;
 
       case '18':
@@ -263,6 +242,7 @@ public static function sync(){
       $valeur->setUnite('rh%');
       break;
 
+      case '17':
       case '19':
       $valeur->setSubType('numeric');
       $valeur->setConfiguration('minValue',-15);
@@ -270,14 +250,15 @@ public static function sync(){
       $valeur->setUnite('°C');
       break;
 
+      case '9':
+      case '10':
+      case '11':
+      case '12':
+      case '13':
+      case '15':
+      case '16':
       case '20':
-      $valeur->setSubType('binary');
-      break;
-
       case '21':
-      $valeur->setSubType('binary');
-      break;
-
       case '22':
       $valeur->setSubType('binary');
       break;
@@ -287,6 +268,221 @@ public static function sync(){
       break;
     }
     $valeur->save();
+  }
+  foreach ($result["accueil_appareil"] as $device) {
+    if($device['securite']<2){
+      $eqLogic = eqLogic::byLogicalId(1000 + $device['nmAction'],'swimo');
+      if(!is_object($eqLogic)){
+        $eqLogic = new swimo();
+        $eqLogic->setEqType_name('swimo');
+        $eqLogic->setLogicalId(1000 + $device['nmAction']);
+        $eqLogic->setName($device['nameAction']);
+      }
+      $eqLogic->setIsEnable(1);
+      $eqLogic->setConfiguration('nmAction',$device['nmAction']);
+      $eqLogic->setConfiguration('idActionType',$device['idActionType']);
+      $eqLogic->save();
+      log::add('swimo', 'debug', 'device : ' . $device['nameAction']);
+      $state = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'state');
+      if(!is_object($state)){
+        $state = new swimoCmd();
+        $state->setEqLogic_id($eqLogic->getId());
+        $state->setLogicalId('state');
+        $state->setName('etat');
+        $state->setIsHistorized(1);
+        $state->setIsVisible(1);
+      }
+      $state->setType('info');
+      $state->setSubType('binary');
+      $state->save();
+
+      $mode = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'mode');
+      if(!is_object($mode)){
+        $mode = new swimoCmd();
+        $mode->setEqLogic_id($eqLogic->getId());
+        $mode->setLogicalId('mode');
+        $mode->setName('Mode');
+        $mode->setIsHistorized(0);
+        $mode->setIsVisible(1);
+      }
+      $mode->setType('info');
+      $mode->setSubType('string');
+      $mode->save();
+
+      $modeOn = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'modeOn');
+      if(!is_object($modeOn)){
+        $modeOn = new swimoCmd();
+        $modeOn->setEqLogic_id($eqLogic->getId());
+        $modeOn->setLogicalId('modeOn');
+        $modeOn->setName('On');
+        $modeOn->setIsVisible(1);
+      }
+      $modeOn->setType('action');
+      $modeOn->setSubType('other');
+      $modeOn->setConfiguration('index',0);
+      $modeOn->setConfiguration('type','index');
+      $modeOn->save();
+
+      $modeOff = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'modeOff');
+      if(!is_object($modeOff)){
+        $modeOff = new swimoCmd();
+        $modeOff->setEqLogic_id($eqLogic->getId());
+        $modeOff->setLogicalId('modeOff');
+        $modeOff->setName('Off');
+        $modeOff->setIsVisible(1);
+      }
+      $modeOff->setType('action');
+      $modeOff->setSubType('other');
+      $modeOff->setConfiguration('index',1);
+      $modeOff->setConfiguration('type','index');
+      $modeOff->save();
+
+      $modeAuto = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'modeAuto');
+      if(!is_object($modeAuto)){
+        $modeAuto = new swimoCmd();
+        $modeAuto->setEqLogic_id($eqLogic->getId());
+        $modeAuto->setLogicalId('modeAuto');
+        $modeAuto->setName('Auto');
+        $modeAuto->setIsVisible(1);
+      }
+      $modeAuto->setType('action');
+      $modeAuto->setSubType('other');
+      $modeAuto->setConfiguration('index',2);
+      $modeAuto->setConfiguration('type','index');
+      $modeAuto->save();
+
+      switch ($device['idActionType']) {
+        case '1':
+          $progPlage = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'progPlage');
+          if(!is_object($progPlage)){
+            $progPlage = new swimoCmd();
+            $progPlage->setEqLogic_id($eqLogic->getId());
+            $progPlage->setLogicalId('progPlage');
+            $progPlage->setName('Prog Plage');
+            $progPlage->setIsVisible(1);
+          }
+          $progPlage->setType('action');
+          $progPlage->setSubType('other');
+          $progPlage->setConfiguration('prog',0);
+          $progPlage->setConfiguration('type','prog');
+          $progPlage->save();
+
+          $progNight = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'progNight');
+          if(!is_object($progNight)){
+            $progNight = new swimoCmd();
+            $progNight->setEqLogic_id($eqLogic->getId());
+            $progNight->setLogicalId('progNight');
+            $progNight->setName('Prog Night');
+            $progNight->setIsVisible(1);
+          }
+          $progNight->setType('action');
+          $progNight->setSubType('other');
+          $progNight->setConfiguration('prog',1);
+          $progNight->setConfiguration('type','prog');
+          $progNight->save();
+
+          $progDay = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'progDay');
+          if(!is_object($progDay)){
+            $progDay = new swimoCmd();
+            $progDay->setEqLogic_id($eqLogic->getId());
+            $progDay->setLogicalId('progDay');
+            $progDay->setName('Prog Day');
+            $progDay->setIsVisible(1);
+          }
+          $progDay->setType('action');
+          $progDay->setSubType('other');
+          $progDay->setConfiguration('prog',2);
+          $progDay->setConfiguration('type','prog');
+          $progDay->save();
+
+          $progWinter = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'progWinter');
+          if(!is_object($progWinter)){
+            $progWinter = new swimoCmd();
+            $progWinter->setEqLogic_id($eqLogic->getId());
+            $progWinter->setLogicalId('progWinter');
+            $progWinter->setName('Prog Winter');
+            $progWinter->setIsVisible(1);
+          }
+          $progWinter->setType('action');
+          $progWinter->setSubType('other');
+          $progWinter->setConfiguration('prog',3);
+          $progWinter->setConfiguration('type','prog');
+          $progWinter->save();
+          break;
+
+        case '2':
+        case '7':
+        case '13':
+          $progPlage = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'progPlage');
+          if(!is_object($progPlage)){
+            $progPlage = new swimoCmd();
+            $progPlage->setEqLogic_id($eqLogic->getId());
+            $progPlage->setLogicalId('progPlage');
+            $progPlage->setName('Prog Plage');
+            $progPlage->setIsVisible(1);
+          }
+          $progPlage->setType('action');
+          $progPlage->setSubType('other');
+          $progPlage->setConfiguration('prog',0);
+          $progPlage->setConfiguration('type','prog');
+          $progPlage->save();
+
+          $progEco = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'progEco');
+          if(!is_object($progEco)){
+            $progEco = new swimoCmd();
+            $progEco->setEqLogic_id($eqLogic->getId());
+            $progEco->setLogicalId('progEco');
+            $progEco->setName('Prog Eco');
+            $progEco->setIsVisible(1);
+          }
+          $progEco->setType('action');
+          $progEco->setSubType('other');
+          $progEco->setConfiguration('prog',1);
+          $progEco->setConfiguration('type','prog');
+          $progEco->save();
+
+          $progMax = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'progMax');
+          if(!is_object($progMax)){
+            $progMax = new swimoCmd();
+            $progMax->setEqLogic_id($eqLogic->getId());
+            $progMax->setLogicalId('progMax');
+            $progMax->setName('Prog Max');
+            $progMax->setIsVisible(1);
+          }
+          $progMax->setType('action');
+          $progMax->setSubType('other');
+          $progMax->setConfiguration('prog',2);
+          $progMax->setConfiguration('type','prog');
+          $progMax->save();
+          break;
+
+        default:
+        // code...
+        break;
+      }
+
+      /*$valeur = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'value');
+      if(!is_object($valeur)){
+        $valeur = new swimoCmd();
+        $valeur->setEqLogic_id($eqLogic->getId());
+        $valeur->setLogicalId('value');
+        $valeur->setName('valeur');
+        $valeur->setIsHistorized(1);
+        $valeur->setIsVisible(1);
+      }
+      $valeur->setType('info');
+      switch ($device['idActionType']) {
+        case '1':
+
+        break;
+
+        default:
+        // code...
+        break;
+      }
+      $valeur->save();*/
+    }
+
   }
   swimo::updateValues();
 }
@@ -322,6 +518,23 @@ class swimoCmd extends cmd {
 */
 
 public function execute($_options = array()) {
+
+  $ipaddress = config::byKey('ipaddress','swimo');
+  $serial = config::byKey('serial','swimo');
+  $apikey = config::byKey('apikey','swimo');
+  $eqLogic = $this->getEqLogic();
+  $nmAction = $eqLogic->getConfiguration('nmAction');
+  $url = "http://".$ipaddress."/cgi-bin/updateDevice?serial=".$serial."&api=".$apikey."&nmAction=".$nmAction;
+  $request_http = new com_http($url);
+  if($this->getConfiguration('type') == 'index'){
+    $url .= "&index=".$this->getConfiguration('index');
+  }else if($this->getConfiguration('type') == 'prog'){
+    $url .= "&codeSeq=".$this->getConfiguration('prog');
+  }
+    log::add('swimo', 'debug', 'url : ' . $url);
+    $request_http = new com_http($url);
+    $request_http->exec(60,2);
+    swimo::updateValues();
 
 }
 
