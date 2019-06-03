@@ -98,12 +98,6 @@ echo '<option value="' . $object->getId() . '">' . $object->getName() . '</optio
 		<label class="checkbox-inline"><input type="checkbox" class="eqLogicAttr" data-l1key="isVisible" checked/>{{Visible}}</label>
 	</div>
 </div>
-     <div class="form-group">
-      <label class="col-sm-3 control-label">{{swimo param 1}}</label>
-      <div class="col-sm-3">
-          <input type="text" class="eqLogicAttr form-control" data-l1key="configuration" data-l2key="city" placeholder="param1"/>
-      </div>
-  </div>
 </fieldset>
 </form>
 </div>
