@@ -123,6 +123,10 @@ public static function updateValues(){
       if(is_object($mode)){
         $mode->event($device['textDevice']);
       }
+      $valeurConsigne = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'valeurConsigne');
+      if(is_object($valeurConsigne)){
+        $valeurConsigne->event($device['consigne']);
+      }
     }
   }
 }
@@ -295,6 +299,42 @@ public static function sync(){
       $state->setType('info');
       $state->setSubType('binary');
       $state->save();
+
+      if($device['unitConsigne'] <> ""){
+        $valeurConsigne = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'valeurConsigne');
+        if(!is_object($valeurConsigne)){
+          $valeurConsigne = new swimoCmd();
+          $valeurConsigne->setEqLogic_id($eqLogic->getId());
+          $valeurConsigne->setLogicalId('valeurConsigne');
+          $valeurConsigne->setName('valeurConsigne');
+          $valeurConsigne->setIsHistorized(0);
+          $valeurConsigne->setIsVisible(0);
+        }
+        $valeurConsigne->setType('info');
+        $valeurConsigne->setSubType('numeric');
+        $valeurConsigne->save();
+
+        $consigne = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'consigne');
+        if(!is_object($consigne)){
+          $consigne = new swimoCmd();
+          $consigne->setEqLogic_id($eqLogic->getId());
+          $consigne->setLogicalId('consigne');
+          $consigne->setName('consigne');
+          $consigne->setIsHistorized(0);
+          $consigne->setIsVisible(0);
+          $consigne->setConfiguration('minValue',0);
+          if($device['consigne'] > 100){
+            $consigne->setConfiguration('maxValue',1000);
+          }else{
+            $consigne->setConfiguration('maxValue',100);
+          }
+        }
+        $consigne->setConfiguration('type','con');
+        $consigne->setType('action');
+        $consigne->setSubType('slider');
+        $consigne->setValue('valeurConsigne');
+        $consigne->save();
+      }
 
       $mode = cmd::byEqLogicIdAndLogicalId($eqLogic->getId(),'mode');
       if(!is_object($mode)){
@@ -530,8 +570,10 @@ public function execute($_options = array()) {
     $url .= "&index=".$this->getConfiguration('index');
   }else if($this->getConfiguration('type') == 'prog'){
     $url .= "&codeSeq=".$this->getConfiguration('prog');
+  }else if($this->getConfiguration('type') == 'con'){
+    $url .= "&con=".$_options['slider'];
   }
-    log::add('swimo', 'debug', 'url : ' . $url);
+    log::add('swimo', 'debug', 'url : '.$url);
     $request_http = new com_http($url);
     $request_http->exec(60,2);
     swimo::updateValues();
