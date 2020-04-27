@@ -1,0 +1,39 @@
+{
+    "plugins\/swimo\/plugin_info\/configuration.php": {
+        "Adresse IP": "IP Адрес ",
+        "Serial": "последовательный",
+        "Apikey": ""
+    },
+    "plugins\/swimo\/desktop\/php\/swimo.php": {
+        "401 - Accès non autorisé": "401 - Несанкционированный доступ",
+        "Gestion": "Управление",
+        "Ajouter": "Добавить",
+        "Synchronisation": "",
+        "Configuration": "Конфигурация",
+        "Mes swimos": "",
+        "Rechercher": "поиск",
+        "Configuration avancée": "Расширенные настройки",
+        "Dupliquer": "дубликат",
+        "Sauvegarder": "Сохранить",
+        "Supprimer": "удаление",
+        "Equipement": "Оборудование",
+        "Commandes": "Команды",
+        "Nom de l'équipement swimo": "",
+        "Objet parent": "Родительский объект",
+        "Aucun": "Нет",
+        "Catégorie": "категория",
+        "Activer": "активировать",
+        "Visible": "Видимый",
+        "Nom": "Имя",
+        "Type": "Тип",
+        "Action": "Действие"
+    },
+    "plugins\/swimo\/desktop\/js\/swimo.js": {
+        "Nom": "Имя",
+        "Tester": "Тест"
+    },
+    "plugins\/swimo\/core\/ajax\/swimo.ajax.php": {
+        "401 - Accès non autorisé": "401 - Несанкционированный доступ",
+        "Aucune méthode correspondante à : ": "Aucune methode correspondante à : "
+    }
+}

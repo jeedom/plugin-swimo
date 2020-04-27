@@ -1,10 +1,10 @@
 .
 . 
 
-Plugin configuration
+Configuração do plugin
 =======================
 
-After downloading the plugin, you just need to activate it,
+,
  :
 
 - 
@@ -13,7 +13,7 @@ After downloading the plugin, you just need to activate it,
 
 ![swimo](../images/swimo1.png)
 
-Equipment configuration
+
 =============================
 
 .
@@ -24,7 +24,7 @@ Equipment configuration
 
 ![swimo3](../images/swimo3.png)
 
-> **NOTE**
+> ****
 >
 > - .
 > - .

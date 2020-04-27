@@ -1,0 +1,39 @@
+{
+    "plugins\/swimo\/plugin_info\/configuration.php": {
+        "Adresse IP": "IPアドレス",
+        "Serial": "シリアル",
+        "Apikey": ""
+    },
+    "plugins\/swimo\/desktop\/php\/swimo.php": {
+        "401 - Accès non autorisé": "401-不正アクセス",
+        "Gestion": "管理",
+        "Ajouter": "加えます",
+        "Synchronisation": "",
+        "Configuration": "コンフィギュレーション",
+        "Mes swimos": "",
+        "Rechercher": "検索",
+        "Configuration avancée": "高度な構成",
+        "Dupliquer": "重複",
+        "Sauvegarder": "セーブ",
+        "Supprimer": "取り除きます",
+        "Equipement": "設備",
+        "Commandes": "コマンド",
+        "Nom de l'équipement swimo": "",
+        "Objet parent": "親オブジェクト",
+        "Aucun": "何でもありません",
+        "Catégorie": "カテゴリ",
+        "Activer": "アクティブ",
+        "Visible": "目に見えます",
+        "Nom": "表題",
+        "Type": "タイプ",
+        "Action": "アクション"
+    },
+    "plugins\/swimo\/desktop\/js\/swimo.js": {
+        "Nom": "表題",
+        "Tester": "テスト"
+    },
+    "plugins\/swimo\/core\/ajax\/swimo.ajax.php": {
+        "401 - Accès non autorisé": "401-不正アクセス",
+        "Aucune méthode correspondante à : ": "以下に対応するメソッドはありません："
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "changelog.md": {
+        "V1. First Release": "V1. First Release"
+    },
+    "index.md": {
+        "Ce plugin permet de connecter les controleurs de piscine Swimo avec Jeedom": "Ce plugin permet de connecter les controleurs de piscine Swimo avec Jeedom",
+        "Le plugin permet de récupérer les valeurs des différents capteurs ainsi que contrôler les actionneurs": "Le plugin permet de récupérer les valeurs des différents capteurs ainsi que contrôler les actionneurs",
+        "(changement de modes, On\/Off, changement des consignes)": "(changement de modes, On\/Off, changement des consignes)",
+        "Configuration du plugin": "Configuration du plugin",
+        "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci": "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci",
+        "puis de configurer quelques éléments": "puis de configurer quelques éléments",
+        "l'adresse IP du swimo": "l'adresse IP du swimo",
+        "le serial du swimo": "le serial du swimo",
+        "L'apikey du swimo": "L'apikey du swimo",
+        "Configuration des équipements": "Configuration des équipements",
+        "La synchronisation des équipements permet de récupérer les sondes et les actionneurs configurés sur le Swimo": "La synchronisation des équipements permet de récupérer les sondes et les actionneurs configurés sur le Swimo",
+        "Une fois configuré dans un objet, vous obtiendrez vos éléments dans le dashboard": "Une fois configuré dans un objet, vous obtiendrez vos éléments dans le dashboard",
+        "Note": "Note",
+        "Les données sont actualisées toutes les 5 minutes ou lors d'une action": "Les données sont actualisées toutes les 5 minutes ou lors d'une action",
+        "Les valeurs de consigne ne sont pas affichées par défaut": "Les valeurs de consigne ne sont pas affichées par défaut",
+        "Ils sont pleinement utilisables via les scénarios": "Ils sont pleinement utilisables via les scénarios"
+    }
+}
