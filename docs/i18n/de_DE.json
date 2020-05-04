@@ -1,23 +1,27 @@
 {
     "changelog.md": {
-        "V1. First Release": ""
+        "V1. First Release": "V1. Erste Veröffentlichung"
     },
     "index.md": {
-        "Ce plugin permet de connecter les controleurs de piscine Swimo avec Jeedom": "",
-        "Le plugin permet de récupérer les valeurs des différents capteurs ainsi que contrôler les actionneurs": "",
-        "(changement de modes, On\/Off, changement des consignes)": "",
+        "Ce plugin permet de connecter les controleurs de piscine Swimo avec Jeedom": "Mit diesem Plugin können Sie Swimo Pool Controller mit Jeedom verbinden",
+        "Le plugin permet de récupérer les valeurs des différents capteurs ainsi que contrôler les actionneurs": "Das Plugin ermöglicht es, die Werte der verschiedenen Sensoren wiederherzustellen sowie die Aktoren zu steuern",
+        "(changement de modes, On\/Off, changement des consignes)": "(Änderung der Modi, Ein \/ Aus, Änderung der Sollwerte)",
         "Configuration du plugin": "Plugin Konfiguration",
         "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci": "Nach dem Herunterladen des Plugins müssen Sie es nur noch aktivieren",
-        "puis de configurer quelques éléments": "",
-        "l'adresse IP du swimo": "",
-        "le serial du swimo": "",
-        "L'apikey du swimo": "",
+        "puis de configurer quelques éléments": "Konfigurieren Sie dann einige Elemente",
+        "l'adresse IP du swimo": "die Swimo IP-Adresse",
+        "le serial du swimo": "Swimo-Serie",
+        "L'apikey du swimo": "Die Apikey von Swimo",
         "Configuration des équipements": "Gerätekonfiguration",
-        "La synchronisation des équipements permet de récupérer les sondes et les actionneurs configurés sur le Swimo": "",
-        "Une fois configuré dans un objet, vous obtiendrez vos éléments dans le dashboard": "",
-        "Note": "Notiz",
-        "Les données sont actualisées toutes les 5 minutes ou lors d'une action": "",
-        "Les valeurs de consigne ne sont pas affichées par défaut": "",
-        "Ils sont pleinement utilisables via les scénarios": ""
+        "La synchronisation des équipements permet de récupérer les sondes et les actionneurs configurés sur le Swimo": "Die Synchronisation der Geräte ermöglicht die Wiederherstellung der auf dem Swimo konfigurierten Sonden und Aktuatoren",
+        "Une fois configuré dans un objet, vous obtiendrez vos éléments dans le dashboard": "Nach der Konfiguration in einem Objekt erhalten Sie Ihre Elemente im Dashboard",
+        "Les données sont actualisées toutes les 5 minutes ou lors d'une action": "Die Daten werden alle 5 Minuten oder während einer Aktion aktualisiert",
+        "Les valeurs de consigne ne sont pas affichées par défaut": "Sollwerte werden standardmäßig nicht angezeigt",
+        "Ils sont pleinement utilisables via les scénarios": "Sie sind über die Szenarien voll nutzbar",
+        " Note.": " Notiz.",
+        " Note?": " Notiz?",
+        "Note ": "Notiz ",
+        "[Note": "[Notiz",
+        "Note]": "Notiz]"
     }
 }

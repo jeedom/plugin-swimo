@@ -1,7 +1,7 @@
 {
     "plugins\/swimo\/plugin_info\/configuration.php": {
         "Adresse IP": "IP-Adresse",
-        "Serial": "",
+        "Serial": "Seriennummer",
         "Apikey": "Apikey"
     },
     "plugins\/swimo\/desktop\/php\/swimo.php": {
@@ -10,7 +10,7 @@
         "Ajouter": "Hinzufügen",
         "Synchronisation": "Synchronisation",
         "Configuration": "Konfiguration",
-        "Mes swimos": "",
+        "Mes swimos": "Meine Swimos",
         "Rechercher": "Suchen nach",
         "Configuration avancée": "Erweiterte Konfiguration",
         "Dupliquer": "Duplikat",
@@ -18,7 +18,7 @@
         "Supprimer": "Löschen",
         "Equipement": "Gerät",
         "Commandes": "Befehle",
-        "Nom de l'équipement swimo": "",
+        "Nom de l'équipement swimo": "Name der Swimo-Ausrüstung",
         "Objet parent": "Übergeordnetes Objekt",
         "Aucun": "Ohne",
         "Catégorie": "Kategorie",
