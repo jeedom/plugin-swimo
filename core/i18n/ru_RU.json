@@ -1,6 +1,6 @@
 {
     "plugins\/swimo\/plugin_info\/configuration.php": {
-        "Adresse IP": "IP Адрес ",
+        "Adresse IP": "IP Адрес",
         "Serial": "последовательный",
         "Apikey": ""
     },
@@ -34,6 +34,6 @@
     },
     "plugins\/swimo\/core\/ajax\/swimo.ajax.php": {
         "401 - Accès non autorisé": "401 - Несанкционированный доступ",
-        "Aucune méthode correspondante à : ": "Aucune methode correspondante à : "
+        "Aucune méthode correspondante à : ": "Aucune methode correspondante à :"
     }
 }

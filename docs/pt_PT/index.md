@@ -24,7 +24,7 @@ Depois de configurado em um objeto, você receberá seus elementos no painel :
 
 ![swimo3](../images/swimo3.png)
 
-> **Note**
+> **NOTA**
 >
 > - Os dados são atualizados a cada 5 minutos ou durante uma ação.
 > - Os pontos de ajuste não são exibidos por padrão.

@@ -24,7 +24,7 @@ Nach der Konfiguration in einem Objekt erhalten Sie Ihre Elemente im Dashboard :
 
 ![swimo3](../images/swimo3.png)
 
-> **Note**
+> **Notiz**
 >
 > - Die Daten werden alle 5 Minuten oder während einer Aktion aktualisiert.
 > - Sollwerte werden standardmäßig nicht angezeigt.

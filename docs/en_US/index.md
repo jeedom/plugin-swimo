@@ -24,7 +24,7 @@ Once configured in an object, you will get your elements in the dashboard :
 
 ![swimo3](../images/swimo3.png)
 
-> **Note**
+> **NOTE**
 >
 > - Data is updated every 5 minutes or during an action.
 > - Setpoints are not displayed by default.

@@ -1,5 +1,5 @@
 Este complemento le permite conectar los controladores de piscina Swimo con Jeedom.
-El complemento permite recuperar los valores de los distintos sensores, así como controlar los actuadores.. (cambio de modos, encendido / apagado, cambio de puntos de ajuste)
+El complemento permite recuperar los valores de los distintos sensores, así como controlar los actuadores. (cambio de modos, encendido / apagado, cambio de puntos de ajuste)
 
 Configuración del plugin
 =======================
@@ -24,8 +24,8 @@ Una vez configurado en un objeto, obtendrá sus elementos en el tablero :
 
 ![swimo3](../images/swimo3.png)
 
-> **Note**
+> **Nota**
 >
-> - Los datos se actualizan cada 5 minutos o durante una acción..
+> - Los datos se actualizan cada 5 minutos o durante una acción.
 > - Los puntos de ajuste no se muestran por defecto.
-> Son totalmente utilizables a través de los escenarios..
+> Son totalmente utilizables a través de los escenarios.
