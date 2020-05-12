@@ -1,15 +1,30 @@
 {
     "changelog.md": {
         "Changelog Swimo": "Changelog Swimo",
-        "V1. First Release": "V1 Primeira versão"
+        "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Como lembrete, se não houver informações sobre a atualização, isso significa que se trata apenas da atualização da documentação, tradução ou texto",
+        "First Release": "Primeira versão",
+        " IMPORTANT.": " IMPORTANTE.",
+        " IMPORTANT?": " IMPORTANTE?",
+        "IMPORTANT ": "IMPORTANTE ",
+        "[IMPORTANT": "[IMPORTANTE",
+        "IMPORTANT]": "IMPORTANTE]",
+        "*IMPORTANT": "*IMPORTANTE",
+        "IMPORTANT*": "IMPORTANTE*",
+        " V1.": " V1.",
+        " V1?": " V1?",
+        "V1 ": "V1 ",
+        "[V1": "[V1",
+        "V1]": "V1]",
+        "*V1": "*V1",
+        "V1*": "V1*"
     },
     "index.md": {
+        "Plugin Swimo": "Plugin Swimo",
         "Ce plugin permet de connecter les controleurs de piscine Swimo avec Jeedom": "Este plug-in permite conectar controladores de pool Swimo com Jeedom",
         "Le plugin permet de récupérer les valeurs des différents capteurs ainsi que contrôler les actionneurs": "O plug-in possibilita recuperar os valores dos vários sensores e controlar os atuadores",
         "(changement de modes, On\/Off, changement des consignes)": "(mudança de modos, On \/ Off, mudança de setpoints)",
         "Configuration du plugin": "Configuração do plugin",
-        "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci": "Depois de baixar o plugin, você só precisa ativá-lo",
-        "puis de configurer quelques éléments": "depois configure alguns elementos",
+        "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci, puis de configurer quelques éléments": "Depois de baixar o plugin, basta ativá-lo e configurar alguns elementos",
         "l'adresse IP du swimo": "o endereço IP swimo",
         "le serial du swimo": "swimo serial",
         "L'apikey du swimo": "O apikey de swimo",

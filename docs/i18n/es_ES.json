@@ -1,15 +1,30 @@
 {
     "changelog.md": {
         "Changelog Swimo": "Changelog Swimo",
-        "V1. First Release": "V1 Primer lanzamiento"
+        "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Como recordatorio si no hay información sobre la actualización, significa que solo se refiere a la actualización de documentación, traducción o texto",
+        "First Release": "Primer lanzamiento",
+        " IMPORTANT.": " Importante.",
+        " IMPORTANT?": " Importante?",
+        "IMPORTANT ": "Importante ",
+        "[IMPORTANT": "[Importante",
+        "IMPORTANT]": "Importante]",
+        "*IMPORTANT": "*Importante",
+        "IMPORTANT*": "Importante*",
+        " V1.": " V1.",
+        " V1?": " V1?",
+        "V1 ": "V1 ",
+        "[V1": "[V1",
+        "V1]": "V1]",
+        "*V1": "*V1",
+        "V1*": "V1*"
     },
     "index.md": {
+        "Plugin Swimo": "Complemento Swimo",
         "Ce plugin permet de connecter les controleurs de piscine Swimo avec Jeedom": "Este complemento le permite conectar los controladores de piscina Swimo con Jeedom",
         "Le plugin permet de récupérer les valeurs des différents capteurs ainsi que contrôler les actionneurs": "El complemento permite recuperar los valores de los distintos sensores, así como controlar los actuadores",
         "(changement de modes, On\/Off, changement des consignes)": "(cambio de modos, encendido \/ apagado, cambio de puntos de ajuste)",
         "Configuration du plugin": "Configuración del plugin",
-        "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci": "Después de descargar el complemento, solo necesita activarlo",
-        "puis de configurer quelques éléments": "luego configura algunos elementos",
+        "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci, puis de configurer quelques éléments": "Después de descargar el complemento, solo necesita activarlo, luego configurar algunos elementos",
         "l'adresse IP du swimo": "la dirección IP de swimo",
         "le serial du swimo": "swimo serial",
         "L'apikey du swimo": "La apikey de swimo",
