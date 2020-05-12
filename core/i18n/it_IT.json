@@ -1,0 +1,39 @@
+{
+    "plugins\/swimo\/plugin_info\/configuration.php": {
+        "Adresse IP": "Indirizzo IP",
+        "Serial": "Serial",
+        "Apikey": ""
+    },
+    "plugins\/swimo\/desktop\/php\/swimo.php": {
+        "401 - Accès non autorisé": "401 - Accesso non autorizzato",
+        "Gestion": "Gestione",
+        "Ajouter": "Aggiungi",
+        "Synchronisation": "",
+        "Configuration": "Configurazione",
+        "Mes swimos": "",
+        "Rechercher": "Ricercare",
+        "Configuration avancée": "Configurazione avanzata",
+        "Dupliquer": "Duplicato",
+        "Sauvegarder": "Salva",
+        "Supprimer": "Rimuovere",
+        "Equipement": "Dispositivo",
+        "Commandes": "Comandi",
+        "Nom de l'équipement swimo": "",
+        "Objet parent": "Oggetto padre",
+        "Aucun": "Nessuno",
+        "Catégorie": "Categoria",
+        "Activer": "Attivare",
+        "Visible": "Visibile",
+        "Nom": "Nome",
+        "Type": "Tipo",
+        "Action": "Azione"
+    },
+    "plugins\/swimo\/desktop\/js\/swimo.js": {
+        "Nom": "Nome",
+        "Tester": "Prova"
+    },
+    "plugins\/swimo\/core\/ajax\/swimo.ajax.php": {
+        "401 - Accès non autorisé": "401 - Accesso non autorizzato",
+        "Aucune méthode correspondante à : ": "Nessun metodo corrispondente a:"
+    }
+}

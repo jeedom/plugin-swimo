@@ -1,0 +1,39 @@
+{
+    "plugins\/swimo\/plugin_info\/configuration.php": {
+        "Adresse IP": "IP Address",
+        "Serial": "Serial",
+        "Apikey": ""
+    },
+    "plugins\/swimo\/desktop\/php\/swimo.php": {
+        "401 - Accès non autorisé": "401 - Akses tidak sah",
+        "Gestion": "Manajemen",
+        "Ajouter": "Tambahan",
+        "Synchronisation": "",
+        "Configuration": "Konfigurasi",
+        "Mes swimos": "",
+        "Rechercher": "Pencarian",
+        "Configuration avancée": "Konfigurasi lanjutan",
+        "Dupliquer": "Duplikat",
+        "Sauvegarder": "Menyimpan",
+        "Supprimer": "Menghapus",
+        "Equipement": "Peralatan",
+        "Commandes": "Perintah",
+        "Nom de l'équipement swimo": "",
+        "Objet parent": "Objek induk",
+        "Aucun": "Tak ada",
+        "Catégorie": "Kategori",
+        "Activer": "Mengaktifkan",
+        "Visible": "Terlihat",
+        "Nom": "Nama",
+        "Type": "Jenis",
+        "Action": "Tindakan"
+    },
+    "plugins\/swimo\/desktop\/js\/swimo.js": {
+        "Nom": "Nama",
+        "Tester": "Coba"
+    },
+    "plugins\/swimo\/core\/ajax\/swimo.ajax.php": {
+        "401 - Accès non autorisé": "401 - Akses tidak sah",
+        "Aucune méthode correspondante à : ": "Aucune methode correspondante à :"
+    }
+}
