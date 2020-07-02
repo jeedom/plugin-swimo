@@ -6,23 +6,23 @@
         " IMPORTANT.": " Important.",
         " IMPORTANT?": " Important?",
         "IMPORTANT ": "Important ",
-        "[IMPORTANT": "[Important",
-        "IMPORTANT]": "Important]",
-        "*IMPORTANT": "*Important",
-        "IMPORTANT*": "Important*",
+        " IMPORTANT]": " Important]",
+        "[IMPORTANT]": "[Important]",
+        "*IMPORTANT*": "*Important*",
+        " IMPORTANT*": " Important*",
         " V1.": " V1.",
         " V1?": " V1?",
         "V1 ": "V1 ",
-        "[V1": "[V1",
-        "V1]": "V1]",
-        "*V1": "*V1",
-        "V1*": "V1*"
+        " V1]": " V1]",
+        "[V1]": "[V1]",
+        "*V1*": "*V1*",
+        " V1*": " V1*"
     },
     "index.md": {
         "Plugin Swimo": "Swimo plugin",
         "Ce plugin permet de connecter les controleurs de piscine Swimo avec Jeedom": "This plugin allows you to connect Swimo pool controllers with Jeedom",
         "Le plugin permet de récupérer les valeurs des différents capteurs ainsi que contrôler les actionneurs": "The plugin makes it possible to recover the values of the various sensors as well as to control the actuators",
-        "(changement de modes, On\/Off, changement des consignes)": "(change of modes, On \/ Off, change of setpoints)",
+        "changement de modes, On\/Off, changement des consignes": "change of modes, On \/ Off, change of setpoints",
         "Configuration du plugin": "Plugin configuration",
         "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci, puis de configurer quelques éléments": "After downloading the plugin, you just need to activate it, then configure some elements",
         "l'adresse IP du swimo": "the swimo IP address",
@@ -37,9 +37,9 @@
         " Note.": " NOTE.",
         " Note?": " NOTE?",
         "Note ": "NOTE ",
-        "[Note": "[NOTE",
-        "Note]": "NOTE]",
-        "*Note": "*NOTE",
-        "Note*": "NOTE*"
+        " Note]": " NOTE]",
+        "[Note]": "[NOTE]",
+        "*Note*": "*NOTE*",
+        " Note*": " NOTE*"
     }
 }

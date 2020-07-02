@@ -6,23 +6,23 @@
         " IMPORTANT.": " Importante.",
         " IMPORTANT?": " Importante?",
         "IMPORTANT ": "Importante ",
-        "[IMPORTANT": "[Importante",
-        "IMPORTANT]": "Importante]",
-        "*IMPORTANT": "*Importante",
-        "IMPORTANT*": "Importante*",
+        " IMPORTANT]": " Importante]",
+        "[IMPORTANT]": "[Importante]",
+        "*IMPORTANT*": "*Importante*",
+        " IMPORTANT*": " Importante*",
         " V1.": " V1.",
         " V1?": " V1?",
         "V1 ": "V1 ",
-        "[V1": "[V1",
-        "V1]": "V1]",
-        "*V1": "*V1",
-        "V1*": "V1*"
+        " V1]": " V1]",
+        "[V1]": "[V1]",
+        "*V1*": "*V1*",
+        " V1*": " V1*"
     },
     "index.md": {
         "Plugin Swimo": "Complemento Swimo",
         "Ce plugin permet de connecter les controleurs de piscine Swimo avec Jeedom": "Este complemento le permite conectar los controladores de piscina Swimo con Jeedom",
         "Le plugin permet de récupérer les valeurs des différents capteurs ainsi que contrôler les actionneurs": "El complemento permite recuperar los valores de los distintos sensores, así como controlar los actuadores",
-        "(changement de modes, On\/Off, changement des consignes)": "(cambio de modos, encendido \/ apagado, cambio de puntos de ajuste)",
+        "changement de modes, On\/Off, changement des consignes": "cambio de modos, encendido \/ apagado, cambio de puntos de ajuste",
         "Configuration du plugin": "Configuración del plugin",
         "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci, puis de configurer quelques éléments": "Después de descargar el complemento, solo necesita activarlo, luego configurar algunos elementos",
         "l'adresse IP du swimo": "la dirección IP de swimo",
@@ -37,9 +37,9 @@
         " Note.": " Nota.",
         " Note?": " Nota?",
         "Note ": "Nota ",
-        "[Note": "[Nota",
-        "Note]": "Nota]",
-        "*Note": "*Nota",
-        "Note*": "Nota*"
+        " Note]": " Nota]",
+        "[Note]": "[Nota]",
+        "*Note*": "*Nota*",
+        " Note*": " Nota*"
     }
 }

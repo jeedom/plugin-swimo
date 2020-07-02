@@ -1,5 +1,6 @@
 {
     "plugins\/swimo\/plugin_info\/configuration.php": {
+        "Type de connexion": "Connection type",
         "Adresse IP": "IP adress",
         "Serial": "Serial",
         "Apikey": "Apikey"
