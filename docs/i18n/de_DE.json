@@ -1,15 +1,30 @@
 {
     "changelog.md": {
         "Changelog Swimo": "Changelog Swimo",
-        "V1. First Release": "V1. Erste Veröffentlichung"
+        "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Zur Erinnerung: Wenn keine Informationen zum Update vorhanden sind, bedeutet dies, dass es sich nur um die Aktualisierung von Dokumentation, Übersetzung oder Text handelt",
+        "First Release": "Erste Veröffentlichung",
+        " IMPORTANT.": " Wichtig.",
+        " IMPORTANT?": " Wichtig?",
+        "IMPORTANT ": "Wichtig ",
+        " IMPORTANT]": " Wichtig]",
+        "[IMPORTANT]": "[Wichtig]",
+        "*IMPORTANT*": "*Wichtig*",
+        " IMPORTANT*": " Wichtig*",
+        " V1.": " V1.",
+        " V1?": " V1?",
+        "V1 ": "V1 ",
+        " V1]": " V1]",
+        "[V1]": "[V1]",
+        "*V1*": "*V1*",
+        " V1*": " V1*"
     },
     "index.md": {
+        "Plugin Swimo": "Swimo Plugin",
         "Ce plugin permet de connecter les controleurs de piscine Swimo avec Jeedom": "Mit diesem Plugin können Sie Swimo Pool Controller mit Jeedom verbinden",
         "Le plugin permet de récupérer les valeurs des différents capteurs ainsi que contrôler les actionneurs": "Das Plugin ermöglicht es, die Werte der verschiedenen Sensoren wiederherzustellen sowie die Aktoren zu steuern",
-        "(changement de modes, On\/Off, changement des consignes)": "(Änderung der Modi, Ein \/ Aus, Änderung der Sollwerte)",
+        "changement de modes, On\/Off, changement des consignes": "Moduswechsel, Ein \/ Aus, Sollwertwechsel",
         "Configuration du plugin": "Plugin Konfiguration",
-        "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci": "Nach dem Herunterladen des Plugins müssen Sie es nur noch aktivieren",
-        "puis de configurer quelques éléments": "Konfigurieren Sie dann einige Elemente",
+        "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci, puis de configurer quelques éléments": "Nachdem Sie das Plugin heruntergeladen haben, müssen Sie es nur aktivieren und dann einige Elemente konfigurieren",
         "l'adresse IP du swimo": "die Swimo IP-Adresse",
         "le serial du swimo": "Swimo-Serie",
         "L'apikey du swimo": "Die Apikey von Swimo",
@@ -22,9 +37,9 @@
         " Note.": " Notiz.",
         " Note?": " Notiz?",
         "Note ": "Notiz ",
-        "[Note": "[Notiz",
-        "Note]": "Notiz]",
-        "*Note": "*Notiz",
-        "Note*": "Notiz*"
+        " Note]": " Notiz]",
+        "[Note]": "[Notiz]",
+        "*Note*": "*Notiz*",
+        " Note*": " Notiz*"
     }
 }

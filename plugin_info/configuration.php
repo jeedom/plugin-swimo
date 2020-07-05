@@ -24,10 +24,19 @@ if (!isConnect()) {
 ?>
 <form class="form-horizontal">
     <fieldset>
-        <div class="form-group">
+	<div class="form-group">
+		<label class="col-lg-3 control-label">{{Type de connexion}}</label>
+		<div class="col-lg-4">
+			<select id="connectType" class="configKey form-control" data-l1key="connectType" >
+				<option value="local">Local</option>
+				<option value="cloud">Cloud</option>
+			</select>
+		</div>
+	</div>
+        <div id="ipaddress" class="form-group">
             <label class="col-lg-4 control-label">{{Adresse IP}}</label>
             <div class="col-lg-2">
-                <input class="configKey form-control" data-l1key="ipaddress" />
+                <input  class="configKey form-control" data-l1key="ipaddress" />
             </div>
         </div>
         <div class="form-group">
@@ -44,3 +53,13 @@ if (!isConnect()) {
         </div>
   </fieldset>
 </form>
+<script>
+$('#connectType').on('select', function () {
+	if($('#connectType option:selected').val() == "cloud"){
+$('#connectType').hide();
+}
+if($('#connectType option:selected').val() == "local"){
+$('#connectType').show();
+}
+});
+</script>

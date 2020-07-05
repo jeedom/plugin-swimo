@@ -90,11 +90,15 @@ public function toHtml($_version = 'dashboard') {
 }
 */
 public static function updateValues(){
-  $ipaddress = config::byKey('ipaddress','swimo');
+  if(config::byKey('connectType','swimo') == 'cloud'){
+    $url = 'https://api.swimo.io';
+  }else{
+    $url = 'http://'.config::byKey('ipaddress','swimo');
+  }
   $serial = config::byKey('serial','swimo');
   $apikey = config::byKey('apikey','swimo');
   log::add('swimo', 'debug', 'start update ');
-  $url = "http://".$ipaddress."/cgi-bin/getAll?serial=".$serial."&api=".$apikey;
+  $url = $url."/cgi-bin/getAll?serial=".$serial."&api=".$apikey;
   $request_http = new com_http($url);
   $result = json_decode($request_http->exec(60,2), true);
   foreach ($result["accueil_analyse"] as $sensor) {
@@ -133,10 +137,14 @@ public static function updateValues(){
 
 public static function sync(){
   log::add('swimo', 'debug', 'start sync ');
-  $ipaddress = config::byKey('ipaddress','swimo');
+  if(config::byKey('connectType','swimo') == 'cloud'){
+    $url = 'https://api.swimo.io';
+  }else{
+    $url = 'http://'.config::byKey('ipaddress','swimo');
+  }
   $serial = config::byKey('serial','swimo');
   $apikey = config::byKey('apikey','swimo');
-  $url = "http://".$ipaddress."/cgi-bin/getAll?serial=".$serial."&api=".$apikey;
+  $url = $url."/cgi-bin/getAll?serial=".$serial."&api=".$apikey;
   $request_http = new com_http($url);
   $result = json_decode($request_http->exec(60,2), true);
   foreach ($result["accueil_analyse"] as $sensor) {
@@ -558,13 +566,16 @@ class swimoCmd extends cmd {
 */
 
 public function execute($_options = array()) {
-
-  $ipaddress = config::byKey('ipaddress','swimo');
+  if(config::byKey('connectType','swimo') == 'cloud'){
+    $url = 'https://api.swimo.io';
+  }else{
+    $url = 'http://'.config::byKey('ipaddress','swimo');
+  }
   $serial = config::byKey('serial','swimo');
   $apikey = config::byKey('apikey','swimo');
   $eqLogic = $this->getEqLogic();
   $nmAction = $eqLogic->getConfiguration('nmAction');
-  $url = "http://".$ipaddress."/cgi-bin/updateDevice?serial=".$serial."&api=".$apikey."&nmAction=".$nmAction;
+  $url = $url."/cgi-bin/updateDevice?serial=".$serial."&api=".$apikey."&nmAction=".$nmAction;
   $request_http = new com_http($url);
   if($this->getConfiguration('type') == 'index'){
     $url .= "&index=".$this->getConfiguration('index');

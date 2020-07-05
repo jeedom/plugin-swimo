@@ -1,15 +1,18 @@
 {
     "changelog.md": {
         "Changelog Swimo": "Changelog Swimo",
-        "V1. First Release": "V1. First Release"
+        "IMPORTANT": "IMPORTANT",
+        "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte": "Pour rappel s'il n'y a pas d'information sur la mise à jour, c'est que celle-ci concerne uniquement de la mise à jour de documentation, de traduction ou de texte",
+        "V1": "V1",
+        "First Release": "First Release"
     },
     "index.md": {
+        "Plugin Swimo": "Plugin Swimo",
         "Ce plugin permet de connecter les controleurs de piscine Swimo avec Jeedom": "Ce plugin permet de connecter les controleurs de piscine Swimo avec Jeedom",
         "Le plugin permet de récupérer les valeurs des différents capteurs ainsi que contrôler les actionneurs": "Le plugin permet de récupérer les valeurs des différents capteurs ainsi que contrôler les actionneurs",
-        "(changement de modes, On\/Off, changement des consignes)": "(changement de modes, On\/Off, changement des consignes)",
+        "changement de modes, On\/Off, changement des consignes": "changement de modes, On\/Off, changement des consignes",
         "Configuration du plugin": "Configuration du plugin",
-        "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci": "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci",
-        "puis de configurer quelques éléments": "puis de configurer quelques éléments",
+        "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci, puis de configurer quelques éléments": "Après téléchargement du plugin, il vous suffit juste d'activer celui-ci, puis de configurer quelques éléments",
         "l'adresse IP du swimo": "l'adresse IP du swimo",
         "le serial du swimo": "le serial du swimo",
         "L'apikey du swimo": "L'apikey du swimo",
