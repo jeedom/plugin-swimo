@@ -36,5 +36,8 @@
     "plugins\/swimo\/core\/ajax\/swimo.ajax.php": {
         "401 - Accès non autorisé": "401 - Unauthorized access",
         "Aucune méthode correspondante à : ": "No method corresponding to:"
+    },
+    "info.json": {
+        "Permet de piloter un controleur de piscine Swimo": "Allows you to control a Swimo pool controller"
     }
 }

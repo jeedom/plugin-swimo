@@ -36,5 +36,8 @@
     "plugins\/swimo\/core\/ajax\/swimo.ajax.php": {
         "401 - Accès non autorisé": "401-不正アクセス",
         "Aucune méthode correspondante à : ": "以下に対応するメソッドはありません："
+    },
+    "info.json": {
+        "Permet de piloter un controleur de piscine Swimo": ""
     }
 }
