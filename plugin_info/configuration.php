@@ -25,8 +25,8 @@ if (!isConnect()) {
 <form class="form-horizontal">
     <fieldset>
 	<div class="form-group">
-		<label class="col-lg-3 control-label">{{Type de connexion}}</label>
-		<div class="col-lg-4">
+		<label class="col-sm-3 control-label">{{Type de connexion}}</label>
+		<div class="col-xs-11 col-sm-7">
 			<select id="connectType" class="configKey form-control" data-l1key="connectType" >
 				<option value="local">Local</option>
 				<option value="cloud">Cloud</option>
@@ -34,20 +34,20 @@ if (!isConnect()) {
 		</div>
 	</div>
         <div id="ipaddress" class="form-group">
-            <label class="col-lg-4 control-label">{{Adresse IP}}</label>
-            <div class="col-lg-2">
+            <label class="col-sm-3 control-label">{{Adresse IP}}</label>
+            <div class="col-xs-11 col-sm-7">
                 <input  class="configKey form-control" data-l1key="ipaddress" />
             </div>
         </div>
         <div class="form-group">
-            <label class="col-lg-4 control-label">{{Serial}}</label>
-            <div class="col-lg-2">
+            <label class="col-sm-3 control-label">{{Serial}}</label>
+            <div class="col-xs-11 col-sm-7">
                 <input class="configKey form-control" data-l1key="serial" />
             </div>
         </div>
         <div class="form-group">
-            <label class="col-lg-4 control-label">{{Apikey}}</label>
-            <div class="col-lg-2">
+            <label class="col-sm-3 control-label">{{Apikey}}</label>
+            <div class="col-xs-11 col-sm-7">
                 <input class="configKey form-control" data-l1key="apikey" />
             </div>
         </div>
