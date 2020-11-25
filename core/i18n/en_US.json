@@ -19,12 +19,16 @@
         "Supprimer": "Delete",
         "Equipement": "Equipment",
         "Commandes": "Commands",
-        "Nom de l'équipement swimo": "Swimo device name",
+        "Général": "Main",
+        "Nom de l'équipement": "Name of equipment",
         "Objet parent": "Parent object",
         "Aucun": "None",
         "Catégorie": "Category",
+        "Options": "Options",
         "Activer": "Activate",
         "Visible": "Visible",
+        "Informations": "Information",
+        "Ajouter une commande": "Add a command",
         "Nom": "Name",
         "Type": "Type",
         "Action": "Action"
@@ -38,6 +42,6 @@
         "Aucune méthode correspondante à : ": "No method corresponding to:"
     },
     "info.json": {
-        "Permet de piloter un controleur de piscine Swimo": "Allows you to control a Swimo pool controller"
+        "Permet de piloter un contrôleur de piscine Swimo.": "Used to control a Swimo pool controller"
     }
 }

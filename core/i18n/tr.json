@@ -19,12 +19,16 @@
         "Supprimer": "Sil",
         "Equipement": "Cihaz",
         "Commandes": "Komutalar",
-        "Nom de l'équipement swimo": "",
+        "Général": "Genel",
+        "Nom de l'équipement": "Ekipman ismi",
         "Objet parent": "Üst nesne",
         "Aucun": "Hiçbir",
         "Catégorie": "Kategori",
+        "Options": "Opsiyonlar",
         "Activer": "Etkinleştir",
         "Visible": "Görülebilir",
+        "Informations": "Bilgiler",
+        "Ajouter une commande": "Komuta ekle",
         "Nom": "İsim",
         "Type": "Çeşit",
         "Action": "Eylem"
@@ -38,6 +42,6 @@
         "Aucune méthode correspondante à : ": "Aşağıdakilere karşılık gelen bir yöntem yok:"
     },
     "info.json": {
-        "Permet de piloter un controleur de piscine Swimo": ""
+        "Permet de piloter un contrôleur de piscine Swimo.": ""
     }
 }

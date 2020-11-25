@@ -19,12 +19,16 @@
         "Supprimer": "удаление",
         "Equipement": "Оборудование",
         "Commandes": "Команды",
-        "Nom de l'équipement swimo": "",
+        "Général": "Главная",
+        "Nom de l'équipement": "Название оборудования",
         "Objet parent": "Родительский объект",
         "Aucun": "Нет",
         "Catégorie": "категория",
+        "Options": "Опции",
         "Activer": "активировать",
         "Visible": "Видимый",
+        "Informations": "Информация",
+        "Ajouter une commande": "Добавить команду",
         "Nom": "Имя",
         "Type": "Тип",
         "Action": "Действие"
@@ -38,6 +42,6 @@
         "Aucune méthode correspondante à : ": "Aucune methode correspondante à :"
     },
     "info.json": {
-        "Permet de piloter un controleur de piscine Swimo": ""
+        "Permet de piloter un contrôleur de piscine Swimo.": ""
     }
 }

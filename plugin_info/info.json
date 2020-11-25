@@ -3,10 +3,10 @@
     "name": "Swimo",
     "description": {
         "fr_FR": "Permet de piloter un contrôleur de piscine Swimo.",
-        "en_US": "Allows you to control a Swimo pool controller",
-        "es_ES": "Le permite controlar un controlador de piscina Swimo",
-        "de_DE": "Ermöglicht die Steuerung eines Swimo-Pool-Controllers",
-        "pt_PT": "Permite controlar um controlador de pool Swimo"
+        "en_US": "Used to control a Swimo pool controller",
+        "es_ES": "Se utiliza para controlar un controlador de piscina Swimo",
+        "de_DE": "Dient zur Steuerung eines Swimo-Pool-Controllers",
+        "pt_PT": "Usado para controlar um controlador de piscina Swimo"
     },
     "licence": "AGPL",
     "author": "Jeedom SAS",

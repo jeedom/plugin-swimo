@@ -19,12 +19,16 @@
         "Supprimer": "Menghapus",
         "Equipement": "Peralatan",
         "Commandes": "Perintah",
-        "Nom de l'équipement swimo": "",
+        "Général": "Umum",
+        "Nom de l'équipement": "Nama peralatan",
         "Objet parent": "Objek induk",
         "Aucun": "Tak ada",
         "Catégorie": "Kategori",
+        "Options": "Pilihan",
         "Activer": "Mengaktifkan",
         "Visible": "Terlihat",
+        "Informations": "Informasi",
+        "Ajouter une commande": "Tambahan pesanan",
         "Nom": "Nama",
         "Type": "Jenis",
         "Action": "Tindakan"
@@ -38,6 +42,6 @@
         "Aucune méthode correspondante à : ": "Aucune methode correspondante à :"
     },
     "info.json": {
-        "Permet de piloter un controleur de piscine Swimo": ""
+        "Permet de piloter un contrôleur de piscine Swimo.": ""
     }
 }

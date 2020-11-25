@@ -19,12 +19,16 @@
         "Supprimer": "取り除きます",
         "Equipement": "設備",
         "Commandes": "コマンド",
-        "Nom de l'équipement swimo": "",
+        "Général": "コモン",
+        "Nom de l'équipement": "機器の名前",
         "Objet parent": "親オブジェクト",
         "Aucun": "何でもありません",
         "Catégorie": "カテゴリ",
+        "Options": "オプション",
         "Activer": "アクティブ",
         "Visible": "目に見えます",
+        "Informations": "情報",
+        "Ajouter une commande": "コマンドの追加",
         "Nom": "表題",
         "Type": "タイプ",
         "Action": "アクション"
@@ -38,6 +42,6 @@
         "Aucune méthode correspondante à : ": "以下に対応するメソッドはありません："
     },
     "info.json": {
-        "Permet de piloter un controleur de piscine Swimo": ""
+        "Permet de piloter un contrôleur de piscine Swimo.": ""
     }
 }

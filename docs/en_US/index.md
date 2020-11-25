@@ -1,15 +1,18 @@
 # Swimo plugin
 
+# Description
+
 This plugin allows you to connect Swimo pool controllers with Jeedom.
-The plugin makes it possible to recover the values of the various sensors as well as to control the actuators. (change of modes, On / Off, change of setpoints)
+The plugin allows you to retrieve the values of the various sensors as well as to control the actuators (change of modes, On / Off, change of setpoints).
 
 # Plugin configuration
 
-After downloading the plugin, you just need to activate it, then configure some elements :
+After downloading the plugin, you just need to activate it, then configure a few elements :
 
-- the swimo IP address
-- swimo serial
-- The apikey of swimo
+- the type of connection *(local or cloud)*.
+- the swimo IP address.
+- swimo serial.
+- The apikey of swimo.
 
 ![swimo](../images/swimo1.png)
 

@@ -1,15 +1,18 @@
 # Complemento Swimo
 
+# Description
+
 Este complemento le permite conectar los controladores de piscina Swimo con Jeedom.
-El complemento permite recuperar los valores de los distintos sensores, así como controlar los actuadores. (cambio de modos, encendido / apagado, cambio de puntos de ajuste)
+El complemento le permite recuperar los valores de los distintos sensores, así como controlar los actuadores (cambio de modos, encendido / apagado, cambio de puntos de ajuste).
 
 # Configuración del plugin
 
-Después de descargar el complemento, solo necesita activarlo, luego configurar algunos elementos :
+Después de descargar el complemento, solo necesita activarlo y luego configurar algunos elementos :
 
-- la dirección IP de swimo
-- swimo serial
-- La apikey de swimo
+- el tipo de conexión *(local o en la nube)*.
+- la dirección IP de swimo.
+- swimo serial.
+- La apikey de swimo.
 
 ![swimo](../images/swimo1.png)
 
